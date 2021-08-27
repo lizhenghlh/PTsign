@@ -9,7 +9,7 @@
 // @include     *btschool*
 // @include     *nicept*
 // @grant none
-// @version     1.4
+// @version     1.5
 // @namespace @github.com/lizhenghlh
 // ==/UserScript==
 (function (window) {
@@ -23,7 +23,10 @@
     var ourSign = document.getElementsByClassName('faqlink')[0] || ''
     var hdhomeSign = document.getElementsByClassName('faqlink')[0] || ''
     var leamonSign = document.getElementsByClassName('faqlink')[0] || ''
-    // var schoolSign = document.get
+    var schoolDoms = document.getElementsByTagName('a') || ''
+    if(schoolDoms[25].href ==='https://pt.btschool.club/index.php?action=addbonus' && window.location.host.indexOf('btschool') != -1){
+        schoolDoms[25].click()
+    }
     var niceptSign = document.getElementsByClassName('faqlink')[0] || ''
     var hdu = document.getElementById('qiandao') || ''
     if (hdu) {
@@ -41,9 +44,6 @@
     if (window.location.host.indexOf('lemonhd') != -1 && hdhomeSign.innerText.indexOf('签到') != -1) {
       leamonSign.click()
     }
-    // if (window.location.host.indexOf('btschool') != -1 && schoolSign.href.indexOf('addbonus') != -1) {
-    //   schoolSign.click()
-    // }
     if (window.location.host.indexOf('nicept') != -1 && niceptSign.innerText.indexOf('簽到得魔力') != -1) {
       niceptSign.click()
     }
