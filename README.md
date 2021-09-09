@@ -9,6 +9,7 @@
 * **btschool**
 * **nicept**
 * **hdupt**
+* **pttime**
 
 ## [点击此处安装](https://greasyfork.org/zh-CN/scripts/372581-ptsign)
 ### 脚本不定期更新，有问题欢迎提ISSUE
