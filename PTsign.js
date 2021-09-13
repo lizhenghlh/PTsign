@@ -9,8 +9,9 @@
 // @include     *btschool*
 // @include     *nicept*
 // @include     *pttime*
+// @include     *pterclub*
 // @grant none
-// @version     1.6
+// @version     1.7
 // @namespace @github.com/lizhenghlh
 // ==/UserScript==
 (function (window) {
@@ -28,6 +29,7 @@
 
     var niceptSign = document.getElementsByClassName('faqlink')[0] || ''
     var pttimeSign = document.getElementsByClassName('faqlink')[0] || ''
+    var ptclubSign = document.getElementsByClassName('faqlink')[0] || ''
     var hdu = document.getElementById('qiandao') || ''
     if (hdu) {
       var hduSign = hdu.firstChild
@@ -53,6 +55,9 @@
     }
     if (host.indexOf('pttime') != -1 && pttimeSign.innerText.indexOf('签到领魔力') != -1) {
       pttimeSign.click()
+    }
+    if (host.indexOf('pterclub') != -1 && ptclubSign.innerText.indexOf('签到得猫粮') != -1) {
+      ptclubSign.click()
     }
     if (host.indexOf('totheglory') != -1 && ttgSign.innerText.indexOf('签到') != -1) {
       ttgSign.click()
